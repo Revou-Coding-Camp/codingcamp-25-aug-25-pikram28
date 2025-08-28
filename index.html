@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RevoU - Demo Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">REV<span>O</span></div>
+    </div>
+    <nav class="nav">
+      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#profile" class="nav-link">Our Profile</a>
+      <a href="#portfolio" class="nav-link">Portofolio</a>
+      <a href="#contact" class="nav-link">Message Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <h1>Hi <span id="welcomeName">Guest</span>, Welcome To Website</h1>
+        <p class="sub">Ini adalah website latihan pertama</p>
+      </div>
+      <div class="hero-banner">
+        <div class="banner-placeholder">1386×578</div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- HQ -->
+    <section class="hq">
+      <h2>Our Headquarter</h2>
+      <div class="hq-list">
+        <div class="hq-item"><div class="hq-circle"></div><div class="hq-label">Jakarta</div></div>
+        <div class="hq-item"><div class="hq-circle"></div><div class="hq-label">Bandung</div></div>
+        <div class="hq-item"><div class="hq-circle"></div><div class="hq-label">Surabaya</div></div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- OUR PROFILE -->
+    <section id="profile" class="company-about">
+      <div class="container">
+        <h2>About The Company</h2>
+        <p>
+          RevoU adalah lembaga pelatihan digital yang fokus membantu individu bertransformasi menjadi tenaga kerja profesional
+          melalui pembelajaran berbasis proyek dan mentorship.
+        </p>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Visi</h3>
+            <p>Mencetak talenta digital yang siap bekerja dan berkontribusi pada ekonomi berbasis teknologi.</p>
+          </div>
+          <div class="card">
+            <h3>Misi</h3>
+            <ul>
+              <li>Menyediakan materi sesuai kebutuhan industri</li>
+              <li>Menyelenggarakan mentor berpengalaman</li>
+              <li>Membangun komunitas alumni berdaya saing</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Nilai</h3>
+            <p>Praktikal, Kolaboratif, Berorientasi hasil, dan Berkelanjutan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- MESSAGE US -->
+    <section id="contact" class="contact-section">
+      <h2>Message Us</h2>
+      <div class="contact-grid">
+        <form id="messageForm" class="contact-form" novalidate>
+          <label>Nama
+            <input type="text" id="name" name="name" placeholder="Nama" required />
+          </label>
+          <label>Tanggal Lahir
+            <input type="date" id="dob" name="dob" />
+          </label>
+          <fieldset class="gender-fieldset">
+            <legend>Jenis Kelamin</legend>
+            <label><input type="radio" name="gender" value="Laki-Laki" checked /> Laki-Laki</label>
+            <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+          </fieldset>
+          <label>Pesan
+            <textarea id="message" name="message" placeholder="Pesan" rows="5"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+          </div>
+        </form>
+
+        <div class="preview-box">
+          <div class="preview-time" id="currentTime"></div>
+          <div class="preview-content">
+            <p><strong>Nama:</strong> <span id="p_name">-</span></p>
+            <p><strong>Tanggal Lahir:</strong> <span id="p_dob">-</span></p>
+            <p><strong>Jenis Kelamin:</strong> <span id="p_gender">-</span></p>
+            <p><strong>Pesan:</strong> <span id="p_message">-</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div>Created By RevoU</div>
+      <div>&copy; <span id="year"></span></div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
