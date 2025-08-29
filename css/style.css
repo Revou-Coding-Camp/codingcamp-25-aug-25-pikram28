@@ -1,10 +1,10 @@
 /* style.css - single stylesheet for the project */
 /* Basic reset and variables */
 :root{
-  --bg:#ffffff;
+  --bg:radial-gradient(#FCAEAE,#FDFFAE);
   --text:#f5be6b;
   --accent:#9d1da39f;
-  --muted:#7a7a7a;
+  --muted:#9d1da39f;
   --border:#bdbdbd;
   --max-width:1100px;
   --radius:6px;
@@ -77,19 +77,45 @@ body{
 .hero-inner{padding:24px 0}
 .hero h1{margin:0;font-size:22px;font-weight:700}
 .hero .sub{color:var(--muted);font-size:13px;margin-top:6px}
-.hero-banner{margin-top:18px;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+/* .hero-banner{margin-top:18px;border:1px solid var(--border);border-radius:4px;overflow:hidden} */
 .banner-placeholder{
   height:320px; display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;
 }
 
 /* Portfolio Section */
-.section-divider{border:0;border-top:2px solid var(--border);margin:28px 0}
+/* .section-divider{border:0;border-top:2px solid var(--border);margin:28px 0}
 .portfolio{max-width:var(--max-width);margin:0 auto;padding:20px var(--container-padding)}
 .portfolio h2{margin:0 0 18px 0}
 .portfolio-list{display:flex;gap:40px;justify-content:space-between;align-items:center;flex-wrap:wrap}
 .portfolio-item{text-align:center;flex:1;min-width:120px}
 .portfolio-circle{width:120px;height:120px;border-radius:50%;border:2px solid var(--border);margin:0 auto 10px;background:transparent}
-.portfolio-label{font-size:13px;color:var(--muted)}
+.portfolio-label{font-size:13px;color:var(--muted)} */
+
+.portfolio{ /* margin kategori */
+	margin: 70px 0; 
+}
+.col-3{ /* margin tiap kategori */
+	flex-basis: 30%;
+	min-width: 250px;
+	margin-bottom: 30px;
+}
+.col-3 img{ /* ukuran gambar lebih kecil */
+	width: 100%;
+	border-radius: 20px 20px 20px 20px;
+}
+.small-container{ /* margin kanan kiri kategori */
+	max-width: 1080px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* supaya responsif, turun ke bawah kalau layar sempit */
+}
 
 /* Contact / Message Us */
 .contact-section{max-width:var(--max-width);margin:32px auto;padding:20px var(--container-padding)}
@@ -97,6 +123,8 @@ body{
 .contact-form label{display:block;margin-bottom:12px;font-size:13px}
 .contact-form input[type="text"],
 .contact-form input[type="date"],
+.contact-form input[type="email"],  
+.contact-form input[type="tel"], 
 .contact-form textarea{
   width:100%;padding:8px;border:1px solid var(--border);border-radius:4px;font-size:14px;
 }
@@ -109,7 +137,7 @@ body{
 .btn.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
 
 /* Preview box */
-.preview-box{border:1px solid var(--border);padding:14px;border-radius:4px;background:#fff;min-height:200px}
+.preview-box{border:1px solid var(--border);padding:14px;border-radius:4px;background:radial-gradient(#f5bd56,#9bf798);min-height:200px}
 .preview-time{font-size:12px;color:var(--muted);margin-bottom:10px}
 .preview-content p{margin:6px 0;font-size:14px}
 .preview-content strong{color:var(--muted)}
@@ -134,7 +162,7 @@ body{
 .profile-title{margin-top:12px}
 .company-about{max-width:var(--max-width);margin:20px auto;padding:20px var(--container-padding)}
 .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
-.card{border:1px solid var(--border);padding:16px;border-radius:6px;background:#fff}
+.card{border:1px solid var(--border);padding:16px;border-radius:6px;background:radial-gradient(#FCAEAE,#33c73a);}
 .contact-cta{background:#f9f9f9;padding:20px 0;border-top:1px solid var(--border);margin-top:20px;text-align:center}
 .contact-cta .btn{display:inline-block;margin-top:10px}
 

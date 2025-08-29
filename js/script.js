@@ -2,11 +2,15 @@
 (function(){
   // Elements
   const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
   const dobInput = document.getElementById('dob');
   const messageInput = document.getElementById('message');
   const form = document.getElementById('messageForm');
   const previewTime = document.getElementById('currentTime');
   const pName = document.getElementById('p_name');
+  const pEmail = document.getElementById('p_email'); 
+  const pPhone = document.getElementById('p_phone');  
   const pDob = document.getElementById('p_dob');
   const pGender = document.getElementById('p_gender');
   const pMessage = document.getElementById('p_message');
@@ -42,6 +46,8 @@
     pName.textContent = data.name || '-';
     pDob.textContent = data.dob || '-';
     pGender.textContent = data.gender || '-';
+    pEmail.textContent = data.email || '-';   
+    pPhone.textContent = data.phone || '-';
     pMessage.textContent = data.message || '-';
     // also set welcome name and save to localStorage
     if (data.name && welcomeNameSpan){
@@ -54,6 +60,8 @@
   function validateForm(data){
     const errors = [];
     if(!data.name || data.name.trim().length < 2) errors.push("Nama minimal 2 karakter.");
+    if(!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.push("Email tidak valid.");
+    if(!data.phone || data.phone.trim().length < 8) errors.push("Nomor telepon minimal 8 digit.");
     // optional: if dob provided, check plausible year
     if(data.dob){
       const y = new Date(data.dob).getFullYear();
@@ -77,6 +85,8 @@
         name: nameInput.value.trim(),
         dob: dobInput.value,
         gender: getGender(),
+        email: emailInput.value.trim(),     
+        phone: phoneInput.value.trim(), 
         message: messageInput.value.trim()
       };
       const errors = validateForm(data);
@@ -100,12 +110,14 @@
     clearBtn.addEventListener('click', function(){
       if(confirm("Clear form?")){
         if(nameInput) nameInput.value = "";
+        if(emailInput) emailInput.value = "";   
+        if(phoneInput) phoneInput.value = "";
         if(dobInput) dobInput.value = "";
         if(messageInput) messageInput.value = "";
         const radios = document.getElementsByName('gender');
         for(let r of radios) r.checked = false;
         // reset preview
-        showPreview({name:'-', dob:'-', gender:'-', message:'-'});
+        showPreview({name:'-', dob:'-', gender:'-', email:'-', phone:'-', message:'-'});
         // remove saved name
         localStorage.removeItem('revo_name');
         loadWelcomeName();
