@@ -14,7 +14,7 @@
       <div class="logo">P<span>RV</span></div>
     </div>
     <nav class="nav">
-      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#hero" class="nav-link">Home</a>
       <a href="#profile" class="nav-link">Our Profile</a>
       <a href="#portfolio" class="nav-link">Portofolio</a>
       <a href="#contact" class="nav-link">Message Us</a>
@@ -25,7 +25,7 @@
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero-inner">
-        <h1>Hi <span id="welcomeName">Guest</span>, Welcome To Website</h1>
+        <h1>Hi <span id="welcomeName">Guest</span>, Welcome To Pikram’s Vintage</h1>
         <p class="sub">Ini adalah website latihan pertama</p>
       </div>
       <div class="hero-banner">
@@ -76,7 +76,7 @@
 
     <hr class="section-divider" />
 
-     <!-- HQ -->
+     <!-- Portolio -->
     <section class="portfolio" id="portfolio">
       <h2>Our Portofolio</h2>
       <div class="portfolio-list">
@@ -104,6 +104,15 @@
             <label><input type="radio" name="gender" value="Laki-Laki" checked /> Laki-Laki</label>
             <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
           </fieldset>
+          
+          <label>Email
+            <input type="email" id="email" name="email" placeholder="Email" required />
+          </label>
+          
+          <label>Phone Number
+            <input type="tel" id="phone" name="phone" placeholder="Nomor Telepon" required />
+          </label>
+
           <label>Pesan
             <textarea id="message" name="message" placeholder="Pesan" rows="5"></textarea>
           </label>
@@ -119,6 +128,8 @@
             <p><strong>Nama:</strong> <span id="p_name">-</span></p>
             <p><strong>Tanggal Lahir:</strong> <span id="p_dob">-</span></p>
             <p><strong>Jenis Kelamin:</strong> <span id="p_gender">-</span></p>
+            <p><strong>Email:</strong> <span id="p_email">-</span></p>
+            <p><strong>Phone:</strong> <span id="p_phone">-</span></p>
             <p><strong>Pesan:</strong> <span id="p_message">-</span></p>
           </div>
         </div>
@@ -127,7 +138,7 @@
 
     <!-- FOOTER -->
     <footer class="site-footer">
-      <div>Created By PIKRAM VINTAGE</div>
+      <div>Created By PIKRAM'S VINTAGE</div>
       <div>&copy; <span id="year"></span></div>
     </footer>
   </main>

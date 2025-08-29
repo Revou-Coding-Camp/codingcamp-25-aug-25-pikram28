@@ -2,8 +2,8 @@
 /* Basic reset and variables */
 :root{
   --bg:#ffffff;
-  --text:#222;
-  --accent:#ac1db19f;
+  --text:#f5be6b;
+  --accent:#9d1da39f;
   --muted:#7a7a7a;
   --border:#bdbdbd;
   --max-width:1100px;
@@ -32,7 +32,8 @@ body{
   border-bottom:2px solid var(--border);
   position:sticky;
   top:0;
-  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.9));
+  background: linear-gradient(to bottom, #71f078, #ef81f3);
+
   z-index:20;
 }
 .brand .logo{
@@ -51,14 +52,25 @@ body{
 
 .nav{display:flex;gap:10px}
 .nav-link{
+  display: inline-block;
   border:1px solid var(--border);
-  padding:6px 12px;
+  padding:4px 10px;
   border-radius:6px;
   text-decoration:none;
   color:var(--text);
   font-size:14px;
+  background: #a1887f; 
 }
-.nav-link.active{background:#fff; box-shadow:0 1px 0 rgba(0,0,0,0.05) inset}
+
+
+/* Hover effect */
+.nav-link:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+/* .nav-link.active{background:#fff; box-shadow:0 1px 0 rgba(0,0,0,0.05) inset} */
 
 /* Hero */
 .hero{max-width:var(--max-width);margin:24px auto;padding:0 var(--container-padding)}
@@ -70,7 +82,7 @@ body{
   height:320px; display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;
 }
 
-/* HQ Section */
+/* Portfolio Section */
 .section-divider{border:0;border-top:2px solid var(--border);margin:28px 0}
 .portfolio{max-width:var(--max-width);margin:0 auto;padding:20px var(--container-padding)}
 .portfolio h2{margin:0 0 18px 0}
@@ -103,7 +115,18 @@ body{
 .preview-content strong{color:var(--muted)}
 
 /* Footer */
-.site-footer{max-width:var(--max-width);margin:30px auto;padding:12px var(--container-padding);display:flex;justify-content:space-between;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
+.site-footer {
+  width:100%;
+  margin:30px auto;
+  padding:20px var(--container-padding);
+  display:flex;
+  justify-content:space-between;
+  color:#3F2305;
+  font-size:13px;
+  border-top:1px solid var(--border);
+  background: linear-gradient(to bottom, #71f078, #ef81f3);
+}
+
 
 /* Profile page styles reuse */
 .profile-hero{max-width:var(--max-width);margin:20px auto;padding:0 var(--container-padding)}
