@@ -5,7 +5,7 @@
   --text:#f5be6b;
   --accent:#9d1da39f;
   --muted:#9d1da39f;
-  --border:#bdbdbd;
+  --border:#3F2305;
   --max-width:1100px;
   --radius:6px;
   --gap:16px;
@@ -82,28 +82,19 @@ body{
   height:320px; display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;
 }
 
-/* Portfolio Section */
-/* .section-divider{border:0;border-top:2px solid var(--border);margin:28px 0}
-.portfolio{max-width:var(--max-width);margin:0 auto;padding:20px var(--container-padding)}
-.portfolio h2{margin:0 0 18px 0}
-.portfolio-list{display:flex;gap:40px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.portfolio-item{text-align:center;flex:1;min-width:120px}
-.portfolio-circle{width:120px;height:120px;border-radius:50%;border:2px solid var(--border);margin:0 auto 10px;background:transparent}
-.portfolio-label{font-size:13px;color:var(--muted)} */
-
-.portfolio{ /* margin kategori */
+.portfolio{ 
 	margin: 70px 0; 
 }
-.col-3{ /* margin tiap kategori */
+.col-3{ 
 	flex-basis: 30%;
 	min-width: 250px;
 	margin-bottom: 30px;
 }
-.col-3 img{ /* ukuran gambar lebih kecil */
+.col-3 img{ 
 	width: 100%;
 	border-radius: 20px 20px 20px 20px;
 }
-.small-container{ /* margin kanan kiri kategori */
+.small-container{ 
 	max-width: 1080px;
 	margin: auto;
 	padding-left: 25px;
@@ -114,7 +105,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* supaya responsif, turun ke bawah kalau layar sempit */
+  flex-wrap: wrap; 
 }
 
 /* Contact / Message Us */
@@ -134,7 +125,7 @@ body{
   background:var(--accent);
   border:0;padding:10px 14px;border-radius:6px;color:#111;font-weight:700;cursor:pointer;text-decoration:none;
 }
-.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn.ghost{background:#3F2305;border:1px solid var(--border);color:var(--text)}
 
 /* Preview box */
 .preview-box{border:1px solid var(--border);padding:14px;border-radius:4px;background:radial-gradient(#f5bd56,#9bf798);min-height:200px}
