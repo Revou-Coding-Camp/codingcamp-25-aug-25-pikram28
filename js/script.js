@@ -97,7 +97,7 @@
       // show preview
       showPreview(data);
       // show success briefly
-      alert("Form berhasil dikirim. Preview terisi di sebelah kanan.");
+      alert("The form has been successfully submitted. The preview is displayed on the right.");
       // update time
       updateTime();
       // optionally persist the entire message snapshot in localStorage
